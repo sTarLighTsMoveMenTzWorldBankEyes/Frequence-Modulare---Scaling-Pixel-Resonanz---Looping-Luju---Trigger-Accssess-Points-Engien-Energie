@@ -86,3 +86,45 @@ Stages steuert Modulation, Trigger und Verbindungen zwischen den Layern
 - **Stages** verbindet alles und ermöglicht Flow- und Trigger-Logik
 
 Möchtest du davon eine visuelle Darstellung (Eurorack-Rack mit diesen Modulen)?
+Hier sind die offiziellen Seiten und Repositories zu den Modulen:
+
+### Pamela’s New Workout / PRO Workout
+- **Offiziell:** [busycircuits.com/alm034](https://busycircuits.com/pages/alm034) (PRO Workout – aktuelle Version)  
+- Hinweis: Die NEW Workout ist discontinued. Die PRO Workout ist der Nachfolger.
+
+### Metropolix
+- **Offiziell:** [intellijel.com/shop/eurorack/metropolix](https://intellijel.com/shop/eurorack/metropolix/)  
+- Manual: Auf der Intellijel-Seite verfügbar
+
+### Mutable Instruments Module (Plaits, Rings, Stages, Ripples, Veils)
+Diese sind **Open Source**.
+
+- **Haupt-Repository:** [github.com/pichenettes/eurorack](https://github.com/pichenettes/eurorack)  
+  (enthält Firmware, Schematics und Code für alle Mutable-Module)
+
+Einzelne Dokumentationen:
+- **Plaits:** [mutable-instruments.net/modules/plaits](https://mutable-instruments.net/modules/plaits)
+- **Rings:** [mutable-instruments.net/modules/rings](https://mutable-instruments.net/modules/rings)
+- **Stages:** [mutable-instruments.net/modules/stages](https://mutable-instruments.net/modules/stages)
+- **Ripples:** [mutable-instruments.net/modules/ripples](https://mutable-instruments.net/modules/ripples)
+- **Veils:** [mutable-instruments.net/modules/veils](https://mutable-instruments.net/modules/veils)
+
+### Spectraphon
+- **Offiziell:** [makenoisemusic.com/modules/spectraphon](https://www.makenoisemusic.com/modules/spectraphon/)  
+- Manual und Firmware-Updates sind dort verfügbar.  
+- Kein öffentliches GitHub-Repo (closed source).
+
+### Zusammenfassung
+
+| Modul | Offizielle Seite | GitHub / Open Source |
+|-------|------------------|----------------------|
+| Pamela’s PRO Workout | [busycircuits.com](https://busycircuits.com/pages/alm034) | Nein |
+| Metropolix | [intellijel.com](https://intellijel.com/shop/eurorack/metropolix/) | Nein |
+| Plaits | [mutable-instruments.net](https://mutable-instruments.net/modules/plaits) | Ja ([eurorack](https://github.com/pichenettes/eurorack)) |
+| Rings | [mutable-instruments.net](https://mutable-instruments.net/modules/rings) | Ja |
+| Stages | [mutable-instruments.net](https://mutable-instruments.net/modules/stages) | Ja |
+| Ripples | [mutable-instruments.net](https://mutable-instruments.net/modules/ripples) | Ja |
+| Veils | [mutable-instruments.net](https://mutable-instruments.net/modules/veils) | Ja |
+| Spectraphon | [makenoisemusic.com](https://www.makenoisemusic.com/modules/spectraphon/) | Nein |
+
+Die Mutable-Module sind besonders interessant, weil du den kompletten Code und die Schematics frei einsehen und sogar selbst bauen kannst.
