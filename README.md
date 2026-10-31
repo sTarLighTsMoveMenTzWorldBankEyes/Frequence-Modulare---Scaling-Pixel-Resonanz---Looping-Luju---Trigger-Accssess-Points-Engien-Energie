@@ -157,3 +157,159 @@ Darin enthalten sind Firmware, Schematics und Code für:
 
 **Zusammengefasst:**  
 Nur die Mutable-Instrumente-Module (Plaits, Rings, Stages, Ripples, Veils) haben ein öffentliches GitHub-Repo. Alle anderen Module sind closed source und haben nur die Herstellerseiten.
+**Module für Klangsynthese und Effekt** aus der empfohlenen Kombination:
+
+### Klangsynthese (Sound-Erzeugung)
+
+| Modul | Hersteller | Art | Beschreibung |
+|-------|------------|-----|--------------|
+| **Plaits** | Mutable Instruments | Macro-Oscillator | Vielseitigster Soundgenerator – 16 Algorithmen (VA, FM, Wavetable, Modal, Drums usw.) |
+| **Rings** | Mutable Instruments | Resonator | Physikalische Modellierung – klingt wie Saiten, Membranen, Rohre |
+| **Spectraphon** | Make Noise | Spectral Oscillator | Spektralanalyse + Resynthese – erzeugt komplexe, sich entwickelnde Klänge aus vorhandenem Audio |
+
+### Effekt / Klangformung
+
+| Modul | Hersteller | Art | Beschreibung |
+|-------|------------|-----|--------------|
+| **Ripples** | Mutable Instruments | Multimode-Filter | Klassischer analoger Filter (LP/BP/HP) mit Resonanz |
+| **Veils** | Mutable Instruments | VCA | Steuert die Lautstärke / Dynamik der Klänge |
+
+### Übersicht nach Funktion
+
+```
+Synthese:     Plaits  +  Rings  +  Spectraphon
+                    ↓
+Effekt:            Ripples (Filter)
+                    ↓
+Dynamik:           Veils (VCA)
+```
+
+**Plaits**, **Rings** und **Spectraphon** erzeugen den Klang.  
+**Ripples** formt ihn (Filter), **Veils** steuert die Lautstärke.
+
+Möchtest du zu einem dieser Module mehr Details oder eine visuelle Darstellung?**Module für Sequenzierung und Steuerung** aus der empfohlenen Kombination:
+
+### Sequenzierung
+
+| Modul | Hersteller | Funktion | Beschreibung |
+|-------|------------|----------|--------------|
+| **Metropolix** | Intellijel | Sequencer | Leistungsstarker Performance-Sequencer mit 2 Tracks, Pitch, Gate, Modulation Lanes und vielen Live-Controls |
+
+### Steuerung / Timing / Modulation
+
+| Modul | Hersteller | Funktion | Beschreibung |
+|-------|------------|----------|--------------|
+| **Pamela’s PRO Workout** | ALM Busy Circuits | Clock / BPM / Sync | Herzstück für Timing – BPM, Clock-Divisions, Euclidean, LFOs, Envelopes |
+| **Stages** | Mutable Instruments | Modulation / Trigger-Logik | Flexibler Segment-Generator – kann als Envelope, LFO, Sequencer oder Trigger-Logik arbeiten |
+
+### Übersicht nach Funktion
+
+```
+Timing:        Pamela’s PRO Workout (BPM + Clock + Sync)
+                    ↓
+Sequenz:       Metropolix (Pitch, Gate, Modulation)
+                    ↓
+Modulation:    Stages (Envelopes, LFOs, Trigger-Logik)
+```
+
+**Pamela’s** liefert den Takt und die Synchronisation.  
+**Metropolix** erzeugt die musikalischen Sequenzen.  
+**Stages** steuert und verbindet alles mit Modulation und Logik.
+
+Möchtest du zu einem dieser Module mehr Details oder eine visuelle Darstellung?**Synchronisation** in einem modularen System bedeutet, dass verschiedene Module zeitlich aufeinander abgestimmt arbeiten – sie teilen sich denselben Takt.
+
+### Grundprinzip
+
+Ein Modul (meist ein Clock-Generator) erzeugt ein regelmäßiges Taktsignal. Alle anderen Module, die mit diesem Takt verbunden sind, folgen diesem Signal. Dadurch spielen Sequenzen, LFOs, Envelopes und andere Prozesse im gleichen Rhythmus.
+
+### Im empfohlenen System
+
+| Modul | Rolle bei der Synchronisation |
+|-------|-------------------------------|
+| **Pamela’s PRO Workout** | Erzeugt den Master-Clock (BPM). Gibt Clock-Signale an andere Module weiter und kann Divisions (z. B. /2, /4, x2) und Euclidean-Rhythmen erzeugen. |
+| **Metropolix** | Empfängt den Clock von Pamela’s und spielt seine Sequenzen synchron dazu. Kann auch selbst Clock ausgeben. |
+| **Stages** | Kann Clock empfangen und darauf basierend Envelopes, LFOs oder Trigger erzeugen, die ebenfalls synchron laufen. |
+
+### Typische Sync-Verbindungen
+
+```
+Pamela’s (Clock Out)
+    ↓
+Metropolix (Clock In)     → Sequenz läuft im Takt
+    ↓
+Stages (Clock In)         → Modulation läuft im Takt
+    ↓
+andere Module (optional)  → weitere Elemente folgen dem gleichen Takt
+```
+
+### Wichtige Sync-Arten
+
+- **Clock-Sync** – Module folgen einem gemeinsamen Taktsignal (häufigster Fall).
+- **Reset** – Ein Signal setzt eine Sequenz oder einen LFO auf den Anfang zurück.
+- **BPM-Sync** – Der Takt ist an eine feste Geschwindigkeit (Beats per Minute) gebunden.
+- **Division / Multiplication** – Ein Modul läuft halb so schnell, doppelt so schnell usw. wie der Master-Clock.
+
+### Im Zusammenhang mit deinem Flow-Konzept
+
+Die Synchronisation ist der Mechanismus, der aus einzelnen Triggern einen zusammenhängenden Flow macht. Ohne Sync laufen die Module unabhängig voneinander. Mit Sync entsteht ein gemeinsamer Rhythmus, in dem Sequenzen, Modulationen und Effekte aufeinander reagieren.
+
+Möchtest du, dass ich die Sync-Verbindungen für das konkrete System noch genauer (mit Patch-Beispielen) darstelle?**Sync-Verbindungen für das konkrete System**
+
+### Master-Clock
+
+**Pamela’s PRO Workout** ist der Master-Clock.
+
+- Sie erzeugt den BPM-Takt.
+- Alle anderen Module folgen diesem Takt.
+
+### Wichtige Verbindungen
+
+```
+Pamela’s PRO Workout
+├── Clock Out  →  Metropolix (Clock In)
+├── Clock Out  →  Stages (Clock / Trigger In)
+└── Optional: weitere Clock-Ausgänge an andere Module
+```
+
+### Modul für Modul
+
+**1. Pamela’s → Metropolix**
+- Pamela’s Clock Out → Metropolix Clock In  
+- Metropolix spielt seine Sequenzen synchron zum BPM von Pamela’s.
+- Optional: Metropolix Reset ← Pamela’s (wenn du Sequenzen gemeinsam zurücksetzen willst).
+
+**2. Pamela’s → Stages**
+- Pamela’s Clock Out → Stages Clock/Trigger In  
+- Stages erzeugt Envelopes, LFOs oder Trigger, die im gleichen Takt laufen.
+- Stages kann die Modulation an Plaits, Rings oder Spectraphon weitergeben.
+
+**3. Metropolix → Sound-Module**
+- Metropolix Pitch Out → Plaits / Rings / Spectraphon (1V/Oct)
+- Metropolix Gate Out → Stages oder direkt an VCAs / Envelopes
+- Dadurch folgen die Klänge der Sequenz und dem gemeinsamen Takt.
+
+**4. Stages → Sound-Module (Modulation)**
+- Stages Ausgänge → CV-Inputs von Plaits, Rings, Spectraphon oder Ripples  
+- Die Modulation bleibt synchron zum Clock.
+
+### Typisches Patch-Beispiel
+
+```
+Pamela’s Clock Out
+    ├── Metropolix Clock In
+    └── Stages Clock In
+
+Metropolix Pitch Out → Plaits 1V/Oct
+Metropolix Gate Out  → Stages Trigger In
+
+Stages Envelope Out → Veils (VCA)
+Stages LFO Out      → Ripples (Filter Cutoff)
+```
+
+### Ergebnis
+
+- Alles läuft im gleichen BPM.
+- Sequenzen, Modulationen und Filterbewegungen sind zeitlich aufeinander abgestimmt.
+- Änderungen am BPM von Pamela’s wirken sich sofort auf das ganze System aus.
+
+Möchtest du, dass ich daraus ein konkretes Patch-Diagramm oder eine visuelle Darstellung mache?
