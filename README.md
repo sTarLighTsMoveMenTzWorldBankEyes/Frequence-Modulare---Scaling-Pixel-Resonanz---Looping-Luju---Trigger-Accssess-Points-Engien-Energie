@@ -128,3 +128,32 @@ Einzelne Dokumentationen:
 | Spectraphon | [makenoisemusic.com](https://www.makenoisemusic.com/modules/spectraphon/) | Nein |
 
 Die Mutable-Module sind besonders interessant, weil du den kompletten Code und die Schematics frei einsehen und sogar selbst bauen kannst.
+Hier sind die Repositories und offiziellen Quellen für alle Module:
+
+### Open Source (Mutable Instruments)
+
+**Haupt-Repository für alle Mutable-Module:**  
+[github.com/pichenettes/eurorack](https://github.com/pichenettes/eurorack)
+
+Darin enthalten sind Firmware, Schematics und Code für:
+
+| Modul | Dokumentation | Im Repo |
+|-------|---------------|---------|
+| **Plaits** | [mutable-instruments.net/modules/plaits](https://mutable-instruments.net/modules/plaits) | Ja |
+| **Rings** | [mutable-instruments.net/modules/rings](https://mutable-instruments.net/modules/rings) | Ja |
+| **Stages** | [mutable-instruments.net/modules/stages](https://mutable-instruments.net/modules/stages) | Ja |
+| **Ripples** | [mutable-instruments.net/modules/ripples](https://mutable-instruments.net/modules/ripples) | Ja |
+| **Veils** | [mutable-instruments.net/modules/veils](https://mutable-instruments.net/modules/veils) | Ja |
+
+### Closed Source (keine öffentlichen Repos)
+
+| Modul | Offizielle Seite |
+|-------|------------------|
+| **Pamela’s PRO Workout** | [busycircuits.com/alm034](https://busycircuits.com/pages/alm034) |
+| **Metropolix** | [intellijel.com/shop/eurorack/metropolix](https://intellijel.com/shop/eurorack/metropolix/) |
+| **Spectraphon** | [makenoisemusic.com/modules/spectraphon](https://www.makenoisemusic.com/modules/spectraphon/) |
+
+---
+
+**Zusammengefasst:**  
+Nur die Mutable-Instrumente-Module (Plaits, Rings, Stages, Ripples, Veils) haben ein öffentliches GitHub-Repo. Alle anderen Module sind closed source und haben nur die Herstellerseiten.
