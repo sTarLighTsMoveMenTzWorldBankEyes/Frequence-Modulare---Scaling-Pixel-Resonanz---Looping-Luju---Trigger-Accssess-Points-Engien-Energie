@@ -44,3 +44,45 @@ Wenn du die Ideen aus dem Gespräch (Spektrum, BPM, Trigger, Flow) modular umset
 5. **Stages** – Modulation und Trigger-Verknüpfung  
 
 Möchtest du eine konkrete kleine Modul-Kombination (z. B. 6–8 Module) für ein System, das zu deiner Flow-Engine-Idee passt?
+**Konkrete Modul-Kombination** für dein Flow-/Spectral-/BPM-Konzept:
+
+### Empfohlenes System (ca. 84–104 HP)
+
+| Modul | Hersteller | Funktion im System | HP |
+|-------|------------|--------------------|----|
+| **Pamela’s New Workout** | ALM Busy Circuits | BPM, Clock, Sync, Divisions | 8 |
+| **Metropolix** | Intellijel | Sequencer (Rhythmus + Melodie) | 34 |
+| **Plaits** | Mutable Instruments | Haupt-Soundquelle (viele Algorithmen) | 12 |
+| **Rings** | Mutable Instruments | Akustische / physikalische Klänge | 14 |
+| **Spectraphon** | Make Noise | Spectral Oscillator (Frequenz-Ebene) | 26 |
+| **Stages** | Mutable Instruments | Modulation, Trigger-Logik, Flow | 14 |
+| **Ripples** | Mutable Instruments | Filter | 8 |
+| **Veils** | Mutable Instruments | VCA (Lautstärke-Steuerung) | 10 |
+
+**Gesamt:** ca. 126 HP (passt in ein 104 HP Case mit etwas Planung oder in ein größeres Case)
+
+### Signalfluss (vereinfacht)
+```
+Pamela’s (BPM/Clock)
+    ↓
+Metropolix (Sequenz)
+    ↓
+Plaits + Rings + Spectraphon (Sound)
+    ↓
+Ripples (Filter)
+    ↓
+Veils (VCA)
+    ↓
+Ausgang
+
+Stages steuert Modulation, Trigger und Verbindungen zwischen den Layern
+```
+
+### Warum diese Kombination
+- **Pamela’s** ist das Timing-Herz (BPM + Sync)
+- **Metropolix** liefert starke Sequenzen
+- **Plaits + Rings** decken elektronische und akustische Klänge ab
+- **Spectraphon** bringt die Spectral-/Frequenz-Ebene
+- **Stages** verbindet alles und ermöglicht Flow- und Trigger-Logik
+
+Möchtest du davon eine visuelle Darstellung (Eurorack-Rack mit diesen Modulen)?
